@@ -2,44 +2,45 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="calculator.js"></script>
     </head>
     <body>
         <h1>Calculator</h1>
         <div class="calculator">
-            <div class="display">
-
+            <div class="display" id="display">
+                <pre>0</pre>
             </div>
             <div class="row">
-                <button class="operands">(</button>
-                <button class="operands">)</button>
-                <button class="operands">%</button>
-                <button class="operands">AC</button> 
+                <button class="operands" onclick="showingDisplay('(')">(</button>
+                <button class="operands" onclick="showingDisplay(')')">)</button>
+                <button class="operands" onclick="showingDisplay('%')">%</button>
+                <button class="operands" onclick="clearLastElement()">AC</button> 
             </div>
             <div class="row">
-                <button class="number">7</button>
-                <button class="number">8</button>
-                <button class="number">9</button>
-                <button class="operands">÷</button>
+                <button class="number" onclick="showingDisplay('7')">7</button>
+                <button class="number" onclick="showingDisplay('8')">8</button>
+                <button class="number" onclick="showingDisplay('9')">9</button>
+                <button class="operands" onclick="showingDisplay('/')">÷</button>
             </div>
             <div class="row">
-                <button class="number">4</button>
-                <button class="number">5</button>
-                <button class="number">6</button>
-                <button class="operands">×</button>
+                <button class="number" onclick="showingDisplay('4')">4</button>
+                <button class="number" onclick="showingDisplay('5')">5</button>
+                <button class="number" onclick="showingDisplay('6')">6</button>
+                <button class="operands" onclick="showingDisplay('*')">×</button>
             </div>
             <div class="row">
-                <button class="number">1</button>
-                <button class="number">2</button>
-                <button class="number">3</button>
-                <button class="operands">-</button>
+                <button class="number" onclick="showingDisplay('1')">1</button>
+                <button class="number" onclick="showingDisplay('2')">2</button>
+                <button class="number" onclick="showingDisplay('3')">3</button>
+                <button class="operands" onclick="showingDisplay('-')">-</button>
             </div>
             <div class="row">
-                <button class="number">0</button>
-                <button class="number">.</button>
-                <button class="equal">=</button>
-                <button class="operands">+</button>
+                <button class="number" onclick="showingDisplay('0')">0</button>
+                <button class="number" onclick="showingDisplay('.')">.</button>
+                <button class="equal" onclick="calculate()">=</button>
+                <button class="operands" onclick="showingDisplay('+')">+</button>
             </div>
         </div>
-        <img src="pusheen.gif" style="float:right; width:25%; height:auto;">
+        <img src="pusheengif.gif" style="float:right; width:10%; height:auto;">
     </body>
 </html>
